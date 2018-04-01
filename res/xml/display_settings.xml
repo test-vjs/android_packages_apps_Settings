@@ -36,6 +36,7 @@
         settings:keywords="@string/keywords_display_night_display" />
 
     <!-- Cross-listed item, if you change this, also change it in power_usage_summary.xml -->
+
     <SwitchPreference
         android:key="auto_brightness"
         android:title="@string/auto_brightness_title"
@@ -139,6 +140,11 @@
         android:key="proximity_on_wake"
         android:title="@string/proximity_wake_title"
         android:summary="@string/proximity_wake_summary" />
+
+        <com.android.settings.display.FontDialogPreference
+            android:key="custom_font"
+            android:title="@string/font_picker_title"
+            android:persistent="false" />
 
     <com.dot.dotextras.preference.SystemSettingSwitchPreference
         android:key="enable_conditions"

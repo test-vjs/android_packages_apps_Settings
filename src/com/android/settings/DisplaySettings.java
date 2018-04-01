@@ -24,6 +24,7 @@ import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.display.AmbientDisplayPreferenceController;
 import com.android.settings.display.AutoBrightnessPreferenceController;
+import com.android.settings.display.FontPickerPreferenceController;
 import com.android.settings.display.AutoRotatePreferenceController;
 import com.android.settings.display.BrightnessLevelPreferenceController;
 import com.android.settings.display.CameraGesturePreferenceController;
@@ -92,6 +93,9 @@ public class DisplaySettings extends DashboardFragment {
             Context context, Lifecycle lifecycle) {
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
         controllers.add(new AutoBrightnessPreferenceController(context, KEY_AUTO_BRIGHTNESS));
+ final AmbientDisplayConfiguration ambientDisplayConfig = new AmbientDisplayConfiguration(context);
+//  controllers.add(new FontPickerPreferenceController(context, lifecycle));
+ controllers.add(new AutoBrightnessPreferenceController(context, KEY_AUTO_BRIGHTNESS));
         controllers.add(new AutoRotatePreferenceController(context, lifecycle));
         controllers.add(new CameraGesturePreferenceController(context));
         controllers.add(new FontSizePreferenceController(context));
