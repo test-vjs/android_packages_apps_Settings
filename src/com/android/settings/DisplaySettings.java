@@ -92,6 +92,7 @@ public class DisplaySettings extends DashboardFragment {
     private static List<AbstractPreferenceController> buildPreferenceControllers(
             Context context, Lifecycle lifecycle) {
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
+        controllers.add(mFontPickerPreference = new FontPickerPreferenceController(context, lifecycle));
         controllers.add(new AutoBrightnessPreferenceController(context, KEY_AUTO_BRIGHTNESS));
  final AmbientDisplayConfiguration ambientDisplayConfig = new AmbientDisplayConfiguration(context);
 //  controllers.add(new FontPickerPreferenceController(context, lifecycle));
